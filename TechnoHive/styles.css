@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2020;
+  }
+
+  body {
+    background-color: #1f2020;
+    padding-top: 100px; /* 👈 Adjust to match header height */
+  }
+  
+  
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222831;
+  z-index: 1000;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 2.0rem;
+    font-size: 1.6rem;
+    color: #EEEEEE;
+    text-decoration: none;
+  }
+
+  .logo p {
+    background-color: #222831;
+    white-space: nowrap;
+  }
+  
+  
+  .intro {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #EEEEEE;
+  }
+  
+  .intro img {
+    width: 200px; /* Or any size you want */
+    height: auto; /* Keeps aspect ratio */
+    margin-bottom: 20px; /* Optional spacing */
+    border-radius: 10px; /* Optional for rounded corners */
+  }
+  
+  
+  .intro h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #FFD369;
+  }
+  
+  .intro p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+  }
+
+  .aboutus{
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #EEEEEE;
+  }
+
+  .aboutus h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFD369;
+  }
+  
+  .aboutus p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+  }
+  
+
+  .members-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #EEEEEE;
+  }
+  
+  .members-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #FFD369;
+  }
+  
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    background-color: #222831;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #EEEEEE;
+    text-decoration: none;
+  }
+  
+  .nav__links li {
+    background-color: #222831;
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #FFD369;
+  }
+  
+  .cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #FFD369;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #222831; /* 👈 Add this line */
+    text-decoration: none; /* Optional: if it's an <a> tag */
+  }
+  
+
+
+  .cta:hover {
+    background-color: #b69548;
+    color: #222831; /* 👈 Add this too */
+  }
+  
+
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #FFD369;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
+
+
+
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 4rem;
+    padding: 2rem 5%;
+    row-gap: 8rem; /* 👈 Makes rows farther apart */
+    justify-content: center;
+    transition: transform 0.3s ease;
+    
+
+  }
+
+  /* Raise the 2nd card in every group of 3 */
+  
+  
+  
+  .member-card {
+    background-color: #222831;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+  }
+  
+  .member-card:hover {
+    transform: translateY(-35px);
+    box-shadow: 0 16px 40px rgba(255, 211, 105, 0.4);
+  }
+
+  .member-card:nth-child(3n-1) {
+    transform: translateY(-25px); /* Super raised */
+
+  }
+  
+  .member-card:nth-child(3n-1):hover {
+    transform: translateY(-35px); /* Raised even more on hover */
+    box-shadow: 0 16px 40px rgba(255, 211, 105, 0.4);
+  }
+  
+
+  
+  .member-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    margin-bottom: 1rem;
+  }
+  
+  .member-card h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    background-color: #222831;
+  }
+  
+  .member-card p {
+    font-size: 0.9rem;
+    color: #cccccc;
+    font-family: "Montserrat", sans-serif;
+    background-color: #222831;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+  
+    .intro p {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+  /* Small screen tweak */
+@media (max-width: 600px) {
+  .member-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .member-card h3 {
+    font-size: 1rem;
+  }
+
+  .member-card p {
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .members-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
