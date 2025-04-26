@@ -39,22 +39,21 @@ header {
 }
 
   
-  .logo {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 2.0rem;
-    font-size: 1.6rem;
-    color: #EEEEEE;
-    text-decoration: none;
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 2.0rem;
+  font-size: 1.6rem;
+  color: #EEEEEE;
+  text-decoration: none;
+}
 
-  .logo p {
-    background-color: #222831;
-    white-space: nowrap;
-  }
-
+.logo p {
+  background-color: #222831;
+  white-space: nowrap;
+}
   
   .section {
     min-height: 75vh;
@@ -91,6 +90,7 @@ header {
   .intro {
     text-align: center; /* 👈 center the whole intro content */
   }
+
   
   .intro-content img {
     width: 240px;
@@ -116,7 +116,30 @@ header {
   }
   
   
+  .projects-heading{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    color: #FFD369;
+    text-align: center; 
+  }
+  .learn-more {
+    margin-top: 10px;
+    padding: 9px 25px;
+    background-color: #FFD369;
+    border: none;
+    border-radius: 50px; /* This makes it round */
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #222831;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+  }
   
+  .learn-more:hover {
+    background-color: #b69548;
+    color: #222831;
+  }
   
   
   .intro h1 {
@@ -157,7 +180,262 @@ header {
     line-height: 1.6;
     color: #EEEEEE;
   }
+
+  .skills{
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #EEEEEE;
+  }
+  .skills h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFD369;
+  }
+
+  .skills h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #FFD369;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .skills ul{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+    list-style-position: inside; /* Moves the bullet closer to the text */
+    padding-left: 0; /* Removes default left padding */
+  }
   
+  .skills p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+  }
+
+  .cv-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: #EEEEEE;
+  }
+  
+  .cv-container h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFD369;
+  }
+  
+  .cv-container h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFD369;
+  }
+  
+  .cv-container ul {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+  
+  .cv-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+    background-color: #1f2020;
+  }
+  
+  /* Project Cards Grid */
+.projects-container {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns on desktop */
+  gap: 4rem;
+  padding: 2rem 5%;
+  row-gap: 8rem; /* 👈 Makes rows farther apart */
+  justify-content: center;
+  transition: transform 0.3s ease;
+  
+}
+#projects-section {
+    margin-bottom: 300px; /* Add more space below the projects section */
+}
+
+.contacts-section{
+  max-height: 40vh;
+}
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);  /* Final position */
+}
+
+.project-card {
+  font-family: "Montserrat", sans-serif;
+  background-color: #222831;
+  color: #EEEEEE;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);  /* Initial position, customize as needed */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.project-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #FFD369;
+  background-color: #222831;
+}
+
+.project-card p {
+  background-color: #222831;
+}
+
+.project-card img {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-35px);
+  box-shadow: 0 16px 40px rgba(255, 211, 105, 0.4);
+}
+
+
+
+
+
+/* Blurring effect */
+/* Blurring effect only for background */
+body.modal-open > *:not(.modal) {
+  filter: blur(5px);
+}
+
+/* Modal styles */
+.modal {
+  font-family: "Montserrat", sans-serif;
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  font-family: "Montserrat", sans-serif;
+  background-color: #222831;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative; /* Allow positioning of close button inside the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Title */
+.modal h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #FFD369;
+ 
+  background-color: #222831;
+}
+
+strong{
+  background-color: #222831;
+}
+
+/* Modal Text */
+.modal p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #EEEEEE;
+  background-color: #222831;
+  margin-bottom: 20px;
+}
+
+/* Modal Image */
+.modal img {
+  width: 400px; /* Make the image width 100% of the modal */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image fits within the container without being cut off */
+  max-height: 80vh; /* Ensures image height doesn't exceed the viewport height */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Close Button (X) */
+.close-btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  color: #FFD369; /* Yellow by default */
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Close Button Hover Effect */
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  /* Close Button for Mobile */
+  .close-btn {
+    font-size: 5rem; /* Make the X button bigger */
+    color: white; /* Change to white on mobile */
+    top: -150px; /* Slightly further outside the modal */
+    right: -30px; /* Slightly further outside the modal */
+    padding: 15px; /* Increase padding for easier click on mobile */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modal-content {
+      width: 90%;
+  }
+}
+
 
 
 
@@ -311,6 +589,7 @@ header {
     font-size: 36px;
     display: block;
     transition: all 0.3s ease 0s;
+    background-color: #1f2020;
   }
   
   .overlay a:hover,
@@ -328,15 +607,25 @@ header {
 
 
   
- 
-  .footer {
-    background-color: #222831;
-    color: #EEEEEE;
-    text-align: center;
-    padding: 40px 10%;
-    font-family: "Montserrat", sans-serif;
-    margin-top: 100px;
-  }
+.footer {
+  background-color: #222831;
+  color: #EEEEEE;
+  text-align: center;
+  padding: 40px 10%;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 25px; /* Reduced from 100px to bring footer closer */
+}
+
+
+
+.contact-section {
+  max-width: 800px;
+  margin: 100px auto 40px; /* Reduced bottom margin to decrease space above footer */
+  padding: 40px 20px;
+  text-align: center;
+  color: #EEEEEE;
+}
+
   
   .footer-content {
     max-width: 1200px;
@@ -385,7 +674,24 @@ header {
     }
   }
 
+  /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  /* Change the close button color to white on mobile */
+  .modal-close {
+    color: white;
+  }
+
+  /* Make the close button even bigger on mobile */
+  .modal-close {
+    font-size: 3rem; /* Increase font size */
+    top: -30px; /* Position it slightly outside the modal */
+    right: -30px; /* Position it slightly outside the modal */
+    padding: 15px; /* Increase padding to make it easier to click */
+  }
+}
+
   @media only screen and (max-width: 600px) {
+
     .intro h1 {
       font-size: 2.5rem;
     }
@@ -400,6 +706,42 @@ header {
     }
   }
   
+  @media (max-width: 900px) {
+    .modal-content {
+      width: 90%; /* 90% of the screen width for smaller devices */
+      max-width: 500px; /* Adjust max width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 95%; /* 95% of the screen width for very small devices */
+      max-width: 400px; /* Adjust max width further for very small screens */
+    }
+    
+    .modal h3 {
+      font-size: 1.4rem; /* Adjust heading size for mobile */
+    }
+  
+    .modal p {
+      font-size: 1rem; /* Adjust paragraph font size for mobile */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .modal-content {
+      width: 100%; /* Full width for the smallest screens */
+      max-width: 350px; /* Set a smaller max-width */
+    }
+  
+    .modal h3 {
+      font-size: 1.2rem; /* Make heading smaller */
+    }
+  
+    .modal p {
+      font-size: 0.9rem; /* Make paragraph font smaller */
+    }
+  }
   
   @media only screen and (max-width: 800px) {
     .nav__links,
@@ -413,16 +755,16 @@ header {
 
   /* Small screen tweak */
 @media (max-width: 600px) {
-  .member-card img {
-    width: 90px;
-    height: 90px;
+  .projects-container img {
+    width: 300px;
+    height: auto;
   }
 
-  .member-card h3 {
+  .projects-container h3 {
     font-size: 1rem;
   }
 
-  .member-card p {
+  .projects-container p {
     font-size: 0.8rem;
   }
   
@@ -435,16 +777,13 @@ header {
 }
 
 @media (max-width: 900px) {
-  .members-grid {
+  .projects-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
-  .member-card:nth-child(3n-1) {
-    transform: translateY(0px); /* Super raised */
   }
 }
 
 @media (max-width: 600px) {
-  .members-grid {
+  .projects-container{
     grid-template-columns: 1fr; /* 1 column on mobile */
     row-gap: 3rem; /* 👈 Makes rows farther apart */
   }

@@ -63,6 +63,31 @@ const cardsObserver = new IntersectionObserver((entries) => {
 const sections = document.querySelectorAll('.members-section');
 sections.forEach((el) => cardsObserver.observe(el));
 
+const projectCardsObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log('Intersection entry:', entry);
+    const cards = entry.target.querySelectorAll('.project-card');
+    if (entry.isIntersecting) {
+      console.log('In view:', entry.target);
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show');
+        }, index * 200); // 200ms stagger for project cards
+      });
+    } else {
+      console.log('Out of view:', entry.target);
+      cards.forEach((card) => {
+        card.classList.remove('show');
+      });
+    }
+  });
+}, {
+  threshold: 0.1, // trigger when 10% of the card is visible
+  rootMargin: '0px 0px -50% 0px'  // trigger before it's fully in view
+});
+
+const projectSections = document.querySelectorAll('.projects-section');
+projectSections.forEach((el) => projectCardsObserver.observe(el));
 
 
 
@@ -76,5 +101,36 @@ window.addEventListener('load', function() {
 // Fade in when page loads
 window.addEventListener('pageshow', function(event) {
   document.body.classList.add('fade-in');
+});
+
+// When the page has fully loaded
+window.addEventListener('load', function() {
+  // Add the fade-in class after the page loads
+  document.body.classList.add('fade-in');
+});
+
+// Get modal and buttons
+const modal = document.getElementById('projectModal');
+const openModalBtn = document.querySelector('.learn-more-btn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+// Show the modal and blur the background
+openModalBtn.addEventListener('click', function() {
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open'); // Blur the background
+});
+
+// Close the modal and remove the blur
+closeModalBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open'); // Remove the blur
+});
+
+// Close modal when clicking outside of the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
 });
 
