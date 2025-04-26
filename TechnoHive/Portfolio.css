@@ -5,6 +5,7 @@
     background-color: #1f2020;
   }
 
+
   body {
     background-color: #1f2020;
     padding-top: 100px;
@@ -56,7 +57,7 @@ header {
 
   
   .section {
-    min-height: 100vh;
+    min-height: 75vh;
     opacity: 0;
     filter: blur(5px);
     transform: translatex(-100px);
@@ -76,16 +77,46 @@ header {
     max-width: 800px;
     margin: 100px auto;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     color: #EEEEEE;
   }
-  
-  .intro img {
-    width: 200px; /* Or any size you want */
-    height: auto; /* Keeps aspect ratio */
-    margin-bottom: 20px; /* Optional spacing */
-    border-radius: 10px; /* Optional for rounded corners */
+  .intro-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
   }
+  
+  
+  .intro {
+    text-align: center; /* 👈 center the whole intro content */
+  }
+  
+  .intro-content img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .intro-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    color: #FFD369;
+  }
+  
+  .intro p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #EEEEEE;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto 0; /* 👈 added a little top margin */
+  }
+  
+  
+  
   
   
   .intro h1 {
@@ -105,7 +136,7 @@ header {
   }
 
  
-  .aboutus{
+  .aboutme{
     max-width: 800px;
     margin: 100px auto;
     padding: 20px;
@@ -113,14 +144,14 @@ header {
     color: #EEEEEE;
   }
 
-  .aboutus h1 {
+  .aboutme h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
     margin-bottom: 20px;
     color: #FFD369;
   }
   
-  .aboutus p {
+  .aboutme p {
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -128,21 +159,73 @@ header {
   }
   
 
-  .members-section {
-    max-width: 1200px;
+
+
+  .contact-section {
+    max-width: 800px;
     margin: 100px auto;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     color: #EEEEEE;
-  }
-  
-  .members-section h1 {
+}
+
+.contact-section h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #FFD369;
-  }
-  
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center; /* Center the paragraph */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center; /* Center the items horizontally */
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    color: #EEEEEE;
+    text-align: center; /* Center the content within each contact item */
+}
+
+.contact-item i {
+    color: #FFD369;
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: #FFD369;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contact-info {
+        align-items: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
   
   .nav__links {
     list-style: none;
@@ -244,103 +327,6 @@ header {
   }
 
 
-
-  .members-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-    gap: 4rem;
-    padding: 2rem 5%;
-    row-gap: 8rem; /* 👈 Makes rows farther apart */
-    justify-content: center;
-    transition: transform 0.3s ease;
-    
-
-  }
-
-  /* Raise the 2nd card in every group of 3 */
-
-  
-  .member-card {
-    background-color: #222831;
-    color: #EEEEEE;
-    text-align: center;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    transform: translateY(50px);
-    opacity: 0;
-    display: block; /* Ensure the card remains a block-level element */
-    transition: all 1s ease;
-  }
-
-  
- .member-card a {
-  display: block; /* Ensure the <a> behaves as a block element */
-  text-decoration: none; /* Remove default link underline */
-  color: inherit; /* Inherit text color from parent (to avoid link color changes) */
-}
-
-
-.member-card a,
-.member-card a:visited {
-  color: orange;
-  text-decoration: none;
-}
-
-.member-card p {
-  color: #cccccc; /* Force the p color to stay gray */
-  text-decoration: none;
-}
-
-
-
-.member-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.member-card:hover {
-  transform: translateY(-35px);
-  box-shadow: 0 16px 40px rgba(255, 211, 105, 0.4);
-}
-
-.member-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.member-card h3 {
-  margin: 0.5rem 0 0.3rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  background-color: #222831;
-}
-
-.member-card p {
-  font-size: 0.9rem;
-  color: #cccccc;
-  font-family: "Montserrat", sans-serif;
-  background-color: #222831;
-  text-decoration: none;
-
-}
-
-   
-
-  .member-card:nth-child(3n-1) {
-    transform: translateY(-25px); /* Super raised */
-
-  }
-  
-  .member-card:nth-child(3n-1):hover {
-    transform: translateY(-35px); /* Raised even more on hover */
-    box-shadow: 0 16px 40px rgba(255, 211, 105, 0.4);
-  }
-  
-
   
  
   .footer {
@@ -403,6 +389,10 @@ header {
     .intro h1 {
       font-size: 2.5rem;
     }
+    .intro-content{
+      flex-direction: column;
+    }
+
   
     .intro p {
       font-size: 1rem;
