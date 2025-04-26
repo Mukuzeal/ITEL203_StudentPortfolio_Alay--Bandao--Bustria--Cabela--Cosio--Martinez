@@ -12,7 +12,7 @@ menuClose.addEventListener("click", () => {
 });
 
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('.overlay a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const offset = 80; // header height
@@ -24,8 +24,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth'
       });
     }
+    // Close the overlay after click
+    overlay.classList.remove('overlay--active');
   });
 });
+
 
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
