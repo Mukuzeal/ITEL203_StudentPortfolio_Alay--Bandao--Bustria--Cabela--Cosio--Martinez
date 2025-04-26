@@ -601,7 +601,7 @@ strong{
   }
   .overlay .close {
     position: absolute;
-    top: 20px;
+    top: 75px;
     right: 45px;
     font-size: 60px;
     color: #edf0f1;
