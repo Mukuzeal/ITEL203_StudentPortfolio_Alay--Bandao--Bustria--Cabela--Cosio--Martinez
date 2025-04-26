@@ -227,6 +227,9 @@ header {
     text-align: center;
     color: #EEEEEE;
   }
+  .cv-container strong {
+    background-color: #1f2020;
+  }
   
   .cv-container h1 {
     font-family: "Montserrat", sans-serif;
