@@ -256,8 +256,6 @@ header {
     row-gap: 8rem; /* 👈 Makes rows farther apart */
     justify-content: center;
     transition: transform 0.3s ease;
-    
-
   }
 
   /* Raise the 2nd card in every group of 3 */
