@@ -111,26 +111,24 @@ window.addEventListener('load', function() {
 
 // Get modal and buttons
 const modal = document.getElementById('projectModal');
-const openModalBtn = document.querySelector('.learn-more-btn');
-const closeModalBtn = document.getElementById('closeModalBtn');
 
-// Show the modal and blur the background
-openModalBtn.addEventListener('click', function() {
+const openModalBtns = document.querySelectorAll('.learn-more');
+openModalBtns.forEach(button => {
+  button.addEventListener('click', function() {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
     modal.style.display = 'flex';
-    document.body.classList.add('modal-open'); // Blur the background
+    document.body.classList.add('modal-open');
+  });
 });
 
-// Close the modal and remove the blur
-closeModalBtn.addEventListener('click', function() {
+const closeModalBtns = document.querySelectorAll('.close-btn');
+closeModalBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const modal = btn.closest('.modal');
     modal.style.display = 'none';
-    document.body.classList.remove('modal-open'); // Remove the blur
+    document.body.classList.remove('modal-open');
+  });
 });
 
-// Close modal when clicking outside of the modal content
-window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-        document.body.classList.remove('modal-open');
-    }
-});
 
