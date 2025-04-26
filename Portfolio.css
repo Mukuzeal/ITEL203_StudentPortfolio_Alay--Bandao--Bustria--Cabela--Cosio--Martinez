@@ -364,6 +364,7 @@ body.modal-open > *:not(.modal) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* Modal Title */
@@ -617,6 +618,15 @@ strong{
   padding: 40px 10%;
   font-family: "Montserrat", sans-serif;
   margin-top: 25px; /* Reduced from 100px to bring footer closer */
+}
+
+#website{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFD369;
+  text-decoration: none;
+  background-color: #222831;
 }
 
 
