@@ -426,7 +426,7 @@ strong{
   .close-btn {
     font-size: 5rem; /* Make the X button bigger */
     color: white; /* Change to white on mobile */
-    top: -150px; /* Slightly further outside the modal */
+    top: -50px; /* Slightly further outside the modal */
     right: -30px; /* Slightly further outside the modal */
     padding: 15px; /* Increase padding for easier click on mobile */
   }
@@ -721,15 +721,23 @@ strong{
   
   @media (max-width: 900px) {
     .modal-content {
-      width: 90%; /* 90% of the screen width for smaller devices */
+      width: 70%; /* 90% of the screen width for smaller devices */
       max-width: 500px; /* Adjust max width for smaller screens */
+    }
+
+    .modal img{
+      max-width: 60%;
     }
   }
   
   @media (max-width: 600px) {
     .modal-content {
-      width: 95%; /* 95% of the screen width for very small devices */
+      width: 60%; /* 95% of the screen width for very small devices */
       max-width: 400px; /* Adjust max width further for very small screens */
+    }
+
+    .modal img{
+      max-width: 60%;
     }
     
     .modal h3 {
@@ -745,6 +753,10 @@ strong{
     .modal-content {
       width: 100%; /* Full width for the smallest screens */
       max-width: 350px; /* Set a smaller max-width */
+    }
+
+    .modal img{
+      max-width: 80%;
     }
   
     .modal h3 {
