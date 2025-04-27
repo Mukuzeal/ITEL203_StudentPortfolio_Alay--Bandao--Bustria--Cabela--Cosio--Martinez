@@ -803,7 +803,7 @@ strong{
 
 @media (max-width: 900px) {
   .projects-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: 1fr; /* 2 columns on tablets */
   }
 }
 
@@ -813,4 +813,7 @@ strong{
     row-gap: 3rem; /* 👈 Makes rows farther apart */
   }
 }
+
+
+
 
